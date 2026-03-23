@@ -1,0 +1,140 @@
+.vc-wrapper {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 500;
+  pointer-events: none;
+}
+
+.vc-sleep-screen {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vc-sleep-content {
+  text-align: center;
+  color: white;
+  font-family: "Roboto Condensed", Roboto, sans-serif;
+}
+
+.vc-sleep-text {
+  font-size: 24px;
+  color: rgb(255 255 255 / 40%);
+  font-weight: 300;
+}
+
+.vc-sleep-text strong {
+  color: rgb(255 255 255 / 70%);
+  font-weight: 500;
+}
+
+/* ── Idle screen ── */
+.vc-idle-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+  max-width: 700px;
+  color: white;
+  font-family: "Roboto Condensed", Roboto, sans-serif;
+}
+
+.vc-title {
+  font-size: 56px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  text-shadow: 0 0 30px rgb(255 255 255 / 25%);
+}
+
+.vc-subtitle {
+  font-size: 22px;
+  color: rgb(255 255 255 / 70%);
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.vc-divider {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 50%), transparent);
+  margin: 0 auto 36px;
+}
+
+.vc-commands {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.vc-command-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-size: 22px;
+  color: rgb(255 255 255 / 90%);
+}
+
+.vc-command-text strong {
+  color: #81d4fa;
+  font-weight: 600;
+}
+
+.vc-mic-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.vc-mic-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #666;
+  display: inline-block;
+}
+
+.vc-mic-dot.vc-mic-active {
+  background: #4caf50;
+  box-shadow: 0 0 10px #4caf50;
+  animation: vc-pulse 2s infinite;
+}
+
+@keyframes vc-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 10px #4caf50;
+  }
+
+  50% {
+    opacity: 0.6;
+    box-shadow: 0 0 20px #4caf50;
+  }
+}
+
+.vc-mic-label {
+  font-size: 16px;
+  color: rgb(255 255 255 / 60%);
+}
+
+.vc-debug {
+  margin-top: 20px;
+  font-size: 14px;
+  color: rgb(255 255 255 / 40%);
+  font-style: italic;
+}

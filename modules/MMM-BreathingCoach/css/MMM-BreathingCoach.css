@@ -1,0 +1,203 @@
+/* Namespace all classes to avoid conflicts with MagicMirror main.css */
+.breathing-coach-wrapper {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* Active breathing container */
+.breathing-active-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SVG Circle */
+.breathing-circle-svg {
+  filter: blur(2px);
+  opacity: 0.9;
+}
+
+.breathing-circle-svg circle {
+  transition: none;
+}
+
+/* Text content */
+.breathing-text-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  width: 90%;
+  max-width: 600px;
+  pointer-events: auto;
+}
+
+.breathing-phase-display {
+  margin-bottom: 40px;
+}
+
+.breathing-phase-text {
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: white;
+  text-shadow:
+    2px 2px 4px rgb(0 0 0 / 80%),
+    0 0 20px rgb(255 255 255 / 40%);
+  margin: 0 0 10px;
+}
+
+.breathing-phase-description {
+  font-size: 24px;
+  color: rgb(255 255 255 / 95%);
+  text-shadow: 1px 1px 3px rgb(0 0 0 / 70%);
+  margin: 0;
+  font-weight: 300;
+}
+
+.breathing-session-info {
+  margin-top: 50px;
+  padding: 20px 30px;
+  background: rgb(0 0 0 / 60%);
+  border-radius: 15px;
+  display: inline-block;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(255 255 255 / 15%);
+}
+
+.breathing-info-row {
+  font-size: 20px;
+  color: rgb(255 255 255 / 95%);
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+
+.breathing-info-row span {
+  padding: 0 10px;
+}
+
+.breathing-instructions {
+  font-size: 16px;
+  color: rgb(255 255 255 / 75%);
+  margin: 10px 0 0;
+  font-style: italic;
+}
+
+/* Awaiting duration state */
+.breathing-awaiting-state {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  pointer-events: auto;
+}
+
+.breathing-awaiting-state h2 {
+  color: #4caf50;
+  font-size: 42px;
+  margin-bottom: 16px;
+  text-shadow: 0 0 20px rgb(76 175 80 / 50%);
+}
+
+.breathing-awaiting-state p {
+  color: rgb(255 255 255 / 85%);
+  font-size: 22px;
+  text-shadow: 1px 1px 2px rgb(0 0 0 / 70%);
+  margin: 8px 0;
+}
+
+.breathing-duration-options {
+  color: #81d4fa !important;
+  font-weight: 500;
+  font-size: 24px !important;
+  margin-top: 16px !important;
+}
+
+.breathing-exit-hint {
+  color: rgb(255 255 255 / 45%) !important;
+  font-size: 16px !important;
+  margin-top: 24px !important;
+}
+
+/* Countdown state */
+.breathing-countdown-state {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  pointer-events: auto;
+}
+
+.breathing-countdown-state h1 {
+  font-size: 140px;
+  color: #2196f3;
+  margin: 0;
+  animation: breathing-bounce 1s infinite;
+  text-shadow: 0 0 30px rgb(33 150 243 / 70%);
+  font-weight: bold;
+}
+
+.breathing-countdown-state p {
+  font-size: 24px;
+  color: rgb(255 255 255 / 90%);
+  margin-top: 20px;
+  text-shadow: 1px 1px 3px rgb(0 0 0 / 70%);
+}
+
+@keyframes breathing-bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Responsive */
+@media (width <= 600px) {
+  .breathing-phase-text {
+    font-size: 36px;
+  }
+
+  .breathing-phase-description {
+    font-size: 18px;
+  }
+
+  .breathing-countdown-state h1 {
+    font-size: 100px;
+  }
+
+  .breathing-info-row {
+    font-size: 16px;
+  }
+
+  .breathing-instructions {
+    font-size: 14px;
+  }
+
+  .breathing-session-info {
+    padding: 15px 20px;
+  }
+}
