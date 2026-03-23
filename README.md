@@ -37,21 +37,21 @@ Requirements:
 - npm
 
 Run following commands in folder terminal after cloning:
-npm install
-python3 -m pip install "mediapipe==0.10.14" opencv-python
-npm run server(opens on localhost - recommended)
-npm start(opens in Electron)
+- npm install
+- python3 -m pip install "mediapipe==0.10.14" opencv-python
+- npm run server(opens on localhost - recommended)
+- npm start(opens in Electron)
 
 For the Pi:
-sudo raspi-config
-Interface Options > Camera > Enable > Reboot
-sudo apt update
-sudo apt install -y python3-pip python3-opencv python3-picamera2 libatlas-base-dev
-pip3 install "mediapipe==0.10.14" --break-system-packages
-git clone [https://github.com/YOUR_USERNAME/MindfulMirror.git](https://github.com/jingqing12/CM3070-MindfulMirror.git)
-cd MindfulMirror
-npm install
-npm start
+- sudo raspi-config
+- Interface Options > Camera > Enable > Reboot
+- sudo apt update
+- sudo apt install -y python3-pip python3-opencv python3-picamera2 libatlas-base-dev
+- pip3 install "mediapipe==0.10.14" --break-system-packages
+- git clone [https://github.com/YOUR_USERNAME/MindfulMirror.git](https://github.com/jingqing12/CM3070-MindfulMirror.git)
+- cd MindfulMirror
+- npm install
+- npm start
 
 
 
