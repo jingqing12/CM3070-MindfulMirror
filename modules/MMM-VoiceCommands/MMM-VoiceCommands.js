@@ -236,7 +236,7 @@ Module.register("MMM-VoiceCommands", {
         this.sendNotification("START_BREATHING_COACH");
         return true;
       }
-      if (this.matchPhrase(transcript, ["start physical game", "start hand game", "physical game", "hand game", "start game"])) {
+      if (this.matchPhrase(transcript, ["start physical game", "start hand game"])) {
         this.activeModule = "handgame";
         if (this.sleepTimeout) clearTimeout(this.sleepTimeout);
         this.hideDefaultModules();
