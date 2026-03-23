@@ -1,3 +1,65 @@
+This is the Finals Project submission for CM3070. It is a smart mirror featuring guided breathing exercises and camera-based hand tracking game, and is built upon the open source MagicMirror² platform. It is designed to be able to run on both in browser as well as the Raspberry Pi. The browser is the recommended interface. The original README is in the bottom half.
+
+Features:
+- Voice-activated sleep/idle state:
+    - Say "Hello/Hey/Hi Mirror" to switch to idle state
+    - "Goodbye"/ "Goodbye mirror" / "Sleep mirror" to sleep state
+- Breathing Coach: Guided 4-7-8 breathing sessions with animated visuals and audio cues
+- Hand Tracking Game: camera-based target game using MediaPipe hand detection with 7 adaptive difficulty levels
+- Full voice intercation: all interactions via voice commands
+- Default Mirror modules: clock, calendar, weather, and live news feed
+
+
+Voice commands
+Sleep state:
+- "Hello/Hey/Hi mirror": switch to idle state
+
+Idle state:
+- "start breathing coach" / "start breathing" / "breathing coach": start breathing coach session
+- "Start breathing coach" / "start breathing" / "breathing coach": start breathing coach session
+- "start physical game" / "start hand game": start hand target game session
+- "goodbye mirror" / "goodbye" / "sleep mirror": switch to sleep state
+
+In Breathing Coach:
+- "1/2/3/4/5/10 minutes": set breathing coach session duration
+- "pause": pause breathing coach session
+- "resume": resume breathing coach session
+- "exit": quit breathing coach session
+
+In Hand Target Game:
+- "30/45/60 seconds": set hand target game duration
+- "exit": quit hand target game
+
+  
+Requirements:
+- Node.js v18 and above(ideally v22)
+- python 3.9 and above
+- npm
+
+Run following commands in folder terminal after cloning:
+npm install
+python3 -m pip install "mediapipe==0.10.14" opencv-python
+npm run server(opens on localhost - recommended)
+npm start(opens in Electron)
+
+For the Pi:
+sudo raspi-config
+Interface Options > Camera > Enable > Reboot
+sudo apt update
+sudo apt install -y python3-pip python3-opencv python3-picamera2 libatlas-base-dev
+pip3 install "mediapipe==0.10.14" --break-system-packages
+git clone [https://github.com/YOUR_USERNAME/MindfulMirror.git](https://github.com/jingqing12/CM3070-MindfulMirror.git)
+cd MindfulMirror
+npm install
+npm start
+
+
+
+
+
+
+
+
 # ![MagicMirror²: The open source modular smart mirror platform.](.github/header.png)
 
 <p style="text-align: center">
