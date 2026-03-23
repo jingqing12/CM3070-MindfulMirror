@@ -48,7 +48,7 @@ For the Pi:
 - sudo apt update
 - sudo apt install -y python3-pip python3-opencv python3-picamera2 libatlas-base-dev
 - pip3 install "mediapipe==0.10.14" --break-system-packages
-- git clone [https://github.com/YOUR_USERNAME/MindfulMirror.git](https://github.com/jingqing12/CM3070-MindfulMirror.git)
+- git clone https://github.com/jingqing12/CM3070-MindfulMirror.git
 - cd MindfulMirror
 - npm install
 - npm start
